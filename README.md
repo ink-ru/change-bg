@@ -23,5 +23,5 @@ Now you have `cronenv` file (without substitutional vars - %s) in users home dir
 
 ```shell
 */1 7-21 * * * cd ~/Pictures && env $(cat ~/cronenv | xargs) /path/to/first/script/change-bg
-Use crontab -e to edit cron jobs for current user. All works fine!
 ```
+Use crontab -e to edit cron jobs for current user. All works fine!
