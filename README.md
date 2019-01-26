@@ -1,7 +1,7 @@
 # change-bg
 ## linux change desktop background in terminal (CLI)
 
-You can use `dconf` to change background. Here is example of simple bash script:
+You can use `dconf` to change background. Here is listing of `change-bg` bash script:
 
 ```shell
 #!/bin/bash
@@ -17,9 +17,9 @@ But to use this script in CRON you need to set session environment variables. Co
 ```shell
 env > ~/cronenv && sed -i '/%s/d' ~/cronenv
 ```
-You can find this code in save_cronenv file
+You can find this code in `save-cronenv` file. You can add this script to startup aplications.
 
-now you have `cronenv` file (without substitutional vars - %s) in users home dir. Just restore them back in cron before running `dconf`:
+Now you have `cronenv` file (without substitutional vars - %s) in users home dir. Just restore them back in cron before running `dconf`:
 
 ```shell
 */1 7-21 * * * cd ~/Pictures && env $(cat ~/cronenv | xargs) /path/to/first/script/bg
