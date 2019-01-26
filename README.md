@@ -22,6 +22,6 @@ You can find this code in `save-cronenv` file. You can add this script to startu
 Now you have `cronenv` file (without substitutional vars - %s) in users home dir. Just restore them back in cron before running `dconf`:
 
 ```shell
-*/1 7-21 * * * cd ~/Pictures && env $(cat ~/cronenv | xargs) /path/to/first/script/bg
+*/1 7-21 * * * cd ~/Pictures && env $(cat ~/cronenv | xargs) /path/to/first/script/change-bg
 Use crontab -e to edit cron jobs for current user. All works fine!
 ```
