@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#clear
+
+#WP="$(find ~+ -type f -exec file -i {} \; 2>/dev/null | grep -i image | sort -R | tail -30 | shuf -n 1)"
+WP="$(find ~+ -type f -exec mimetype {} + 2>/dev/null | awk -F': +' '{ if ($2 ~ /^image\//) print $1 }' | sort -R | tail -30 | shuf -n 1)"
+
+echo "${WP}"
+dconf write /org/mate/desktop/background/picture-filename "'${WP}'"root@nodehost:/opt/scripts# 
