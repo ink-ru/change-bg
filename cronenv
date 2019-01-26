@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#clear
+
+env > ~/cronenv && sed -i '/%s/d' ~/cronenv
+
+exit 1
+
+##########################################
+### export DBUS_SESSION_BUS_ADDRESS=....
+### source ~/.dbus/session-bus/ *
+##########################################
+
+#touch $HOME/.dbus/Xdbus
+#chmod 600 $HOME/.dbus/Xdbus
+#env | grep DBUS_SESSION_BUS_ADDRESS > $HOME/.dbus/Xdbus
+#echo 'export DBUS_SESSION_BUS_ADDRESS' >> $HOME/.dbus/Xdbus
+
+#exit 1
